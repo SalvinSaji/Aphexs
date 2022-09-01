@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function rst(cls){
+            var item = document.querySelector(cls);
+            item.style.outline = "0";
+            item.style.borderBottom = "1px solid white";
+        }
+
+        function check(cls){
+            var item = document.querySelector(cls);
+            if(item.value == ""){
+                item.style.outline = "2px Solid Red";
+                item.style.borderBottom = "0";
+            }
+        }
+
+        function checkM(cls){
+            var item = document.querySelector(cls);
+            var em = item.value;
+            var re = /\S+@\S+\.\S+/;
+            if(!re.test(em)){
+                item.style.outline = "2px Solid Red";
+                item.style.borderBottom = "0";
+            }
+        }
+    </script>
+</head>
+<body>
+    <section class="about-us">
+        <h1>About Us</h1>
+        <p class="bold">Creating a New Standard in Automation and Empowering Traders to Make Miracles Easily</p>
+        <p>APHEXS offers a seamless trading experience, removing all barriers to automate your trades completely. APHEXS platform is extensive and rich in its capabilities and features. For the first time, traders with zero technical skills can automate their trading completely in their own style. APHEXS is not limited to code free automation, it offers all possible automatable things in stock market, in a user friendly way. </p>
+        <p>APHEXS was founded in 2022 by a team of veterans with support of National Institute Of Technology Calicut, with a vision of creating an automatable platform with exceptional capabilities on which anyone can automate without any prerequisites.</p>
+    </section>
+    <section class="form-subb">
+        <div class="form-sub fade-in">
+            <p>For Any Assistance Required Please Reach Out</p>
+            <form action="">
+                <div class="flex">
+                    <div class="form-item">
+                        <p>First Name *</p>
+                        <input type="text" class="first-name" onclick="rst('.first-name')" onfocusout="check('.first-name')" required>
+                    </div>
+                    <div class="form-item">
+                        <p>Last Name *</p>
+                        <input type="text" class="last-name" onclick="rst('.last-name')" onfocusout="check('.last-name')" required>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <p>Email *</p>
+                    <input type="email" class="email" onclick="rst('.email')" onfocusout="checkM('.email')" required>
+                </div>
+                <div class="form-item">
+                    <p>Leave us a message</p>
+                    <input type="text" class="message">
+                </div>
+                <button class="form-item submit-btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+</body>
+<script src="fade.js"></script>
+</html>

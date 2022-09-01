@@ -1,0 +1,148 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bg : #384a8f;
+}
+
+.about-us{
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: center;
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+    padding: 3em;
+}
+
+.about-us h1{
+    font-size: clamp(2rem,4vw,6rem);
+    font-weight: 400;
+    position: relative;
+}
+
+.about-us h1::after{
+    position: absolute;
+    height: 2.5px;
+    width: 5%;
+    min-width: 30px;
+    content: '';
+    background-color: black;
+    bottom: -0.5em;
+    left: 47.5%;
+}
+
+.about-us p{
+    font-size: clamp(1rem,1.8vw,1.1rem);
+    margin : 2.5em 0;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.about-us .bold{
+    font-weight: 600;
+    font-size: clamp(1rem,2vw,1.5rem);
+}
+
+.form-subb{
+    background-image: url(./contact\ bg.webp);
+    background-size: cover;
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+}
+
+.fade-in{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.appear{
+    opacity: 1; 
+}
+
+.form-sub form input{
+    width: 100%;
+}
+
+.form-sub>p{
+    color: white;
+    font-size: clamp(2rem,4vw,6rem);
+    padding: 5rem 5rem 0;
+}
+
+.form-sub>form{
+    font-weight: 300;
+    padding: 5rem;
+}
+
+.form-item{
+    margin-bottom: 2em;
+}
+
+.form-item p{
+    color: white;
+    margin-bottom: 2em;
+}
+
+.form-item input{
+    color: white;
+    border: 0;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+}
+
+.form-item input:focus{
+    outline: 0;
+}
+
+.submit-btn{
+    font-size: 1.12rem;
+    color: white;
+    padding: 0.5em 2.8em;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 2em;
+}
+
+.submit-btn:hover{
+    color: black;
+    background-color: white;
+    transition:all 200ms ease-in;
+}
+
+@media (min-width : 940px){
+
+    .about-us{
+        margin: auto;
+        padding: auto;
+        min-height: 100vh;
+        max-width: 60%;
+    }
+    
+    .form-sub{
+        padding: 0 0;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 4fr 4fr 1fr;
+    }
+
+    .form-sub>p{
+        grid-column: 2/3;
+    }
+    
+    .form-sub>form{
+        grid-column: 3/4;
+    }
+
+    .form-sub .flex{
+        display: flex;
+    }
+    
+    .form-sub .flex .form-item + .form-item{
+        margin-left: 2em;
+    }
+}
