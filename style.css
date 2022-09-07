@@ -158,6 +158,14 @@ footer>.apps .app-play img{
     width: clamp(8rem,15vw,9rem);
 }
 
+footer>.apps .app-play a+a{
+    margin-top: 0.5em;
+}
+
+footer>.apps p{
+    padding-top: 2em;
+}
+
 .little-img{
     display: inline-block;
     width: 20px;
@@ -209,7 +217,9 @@ footer>.apps .app-play img{
     footer>.desc{
         grid-column: 2/3;
     }
+}
 
+@media (min-width: 700px) {
     footer>.apps .app-play{
         flex-direction: row;
 
@@ -217,10 +227,6 @@ footer>.apps .app-play img{
 
     footer>.apps .app-play a+a{
         padding-left: 2em;
+        margin-top: 0;
     }
-
-    footer>.apps p{
-        padding-top: 2em;
-    }
-
 }
